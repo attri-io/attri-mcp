@@ -4,6 +4,27 @@ Everything for using [Attri](https://attri.io) from an AI assistant: the skills 
 
 The assistant talks to Attri through the MCP server at `https://app.attri.io/mcp`. Sign-in is OAuth 2.1; you choose which workspaces the assistant may use and what it may do. Setup per client: <https://attri.io/docs/api/assistants>.
 
+## Install
+
+| Client | How |
+|---|---|
+| Claude Code | `claude plugin marketplace add attri-io/attri-mcp` then `claude plugin install attri@attri` |
+| Grok Build / Grok Bot | Search "Attri" in the plugin marketplace, or point at this repo |
+| Cursor | Search "Attri" in the plugin marketplace |
+| Claude.ai, ChatGPT, anything with a custom-connector field | Add `https://app.attri.io/mcp` directly; no plugin needed |
+
+Each client opens Attri in your browser the first time; you pick the workspaces and permissions there.
+
+## Layout
+
+| Path | What it is |
+|---|---|
+| `.mcp.json` / `mcp.json` | The MCP server declaration (Claude Code and Grok read the dotted file, Cursor the plain one) |
+| `.claude-plugin/`, `.grok-plugin/`, `.cursor-plugin/` | Plugin manifests per client; same metadata |
+| `skills/` | The skills below, loaded by every client |
+| `templates/` | The Grok Bot template's instructions, routine and setup text |
+| `assets/logo.svg` | The Attri mark |
+
 ## Contents
 
 | Path | What it is |

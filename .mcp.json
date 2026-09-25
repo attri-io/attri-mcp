@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "attri": {
+      "type": "http",
+      "url": "https://app.attri.io/mcp"
+    }
+  }
+}
