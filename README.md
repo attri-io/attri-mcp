@@ -1,6 +1,6 @@
-# Attri for AI assistants
+# attri-mcp
 
-Skills and plugin manifests that let an AI assistant work with [Attri](https://attri.io): link attribution, site analytics, Search Console data joined to on-site behaviour, and the posture review (ranked findings on what to fix first).
+Everything for using [Attri](https://attri.io) from an AI assistant: the skills and plugin manifests that wrap Attri's MCP server. The server itself runs inside the Attri app at `https://app.attri.io/mcp`; this repo is what marketplaces list and what assistants read to use it well. Attri is link attribution, site analytics, Search Console data joined to on-site behaviour, and the posture review (ranked findings on what to fix first).
 
 The assistant talks to Attri through the MCP server at `https://app.attri.io/mcp`. Sign-in is OAuth 2.1; you choose which workspaces the assistant may use and what it may do. Setup per client: <https://attri.io/docs/api/assistants>.
 
