@@ -6,7 +6,7 @@
     "name": "Attri",
     "url": "https://attri.io"
   },
-  "homepage": "https://attri.io/docs/api/assistants",
+  "homepage": "https://attri.io",
   "repository": "https://github.com/attri-io/attri-mcp",
   "license": "MIT",
   "keywords": [
@@ -20,5 +20,8 @@
     "mcp",
     "posture review"
   ],
-  "privacyPolicyUrl": "https://attri.io/privacy"
+  "privacyPolicyUrl": "https://attri.io/privacy",
+  "documentationUrl": "https://attri.io/docs/api/assistants",
+  "supportUrl": "https://attri.io/support",
+  "termsOfServiceUrl": "https://attri.io/terms"
 }
