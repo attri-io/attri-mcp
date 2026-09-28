@@ -39,6 +39,10 @@ Plugin manifests for Grok Build / Grok Bot and Cursor, and the Claude Code plugi
 Read: `list_workspaces`, `get_workspace`, `get_site_overview`, `list_top_pages`, `list_sources`, `list_outbound_clicks`, `get_search_overview`, `list_search_queries`, `list_search_pages`, `get_search_query_pages`, `list_findings`, `get_finding`, `list_links`, `list_top_links`, `list_conversions`, `list_goals`.
 Write (need the matching scope): `create_link`, `set_finding_status`.
 
+## Privacy
+
+The plugin sends requests only to Attri's MCP server at `https://app.attri.io/mcp`, authenticated with the OAuth token issued when you sign in. It reads the workspaces you enabled on the consent screen and nothing else: no conversation content, no files, no data from other tools. What Attri collects, stores and retains is in the [Attri Privacy Policy](https://attri.io/privacy).
+
 ## License
 
 MIT for the contents of this repository. Attri itself is a commercial product.
