@@ -41,7 +41,7 @@ Write (need the matching scope): `create_link`, `set_finding_status`.
 
 ## Privacy
 
-The plugin sends requests only to Attri's MCP server at `https://app.attri.io/mcp`, authenticated with the OAuth token issued when you sign in. It reads the workspaces you enabled on the consent screen and nothing else: no conversation content, no files, no data from other tools. What Attri collects, stores and retains is in the [Attri Privacy Policy](https://attri.io/privacy).
+The plugin sends requests only to Attri's MCP server at `https://app.attri.io/mcp`, using the sign-in you complete in your browser; the plugin holds no credentials of its own and reads nothing from your machine. It reads the workspaces you enabled on the consent screen and nothing else: no conversation content, no files, no data from other tools. What Attri collects, stores and retains is in the [Attri Privacy Policy](https://attri.io/privacy).
 
 ## License
 
