@@ -10,7 +10,7 @@ A routine, not a report. The output is three decisions the person can take this 
 ## Steps
 
 1. **Scope.** `list_workspaces`; run the review per workspace if several are enabled.
-2. **What moved.** `get_site_overview` for the last 7 days versus the prior 7 (pass `date_from` and `date_to`). Note visitors, sessions and conversions with the change, and the channel mix. Then `get_search_overview` for the same window: clicks, impressions, position, and Attri's search sessions and conversions.
+2. **What moved.** `get_site_overview` for the last 7 days versus the prior 7 (set `date_from` and `date_to`). Note visitors, sessions and conversions with the change, and the channel mix. Then `get_search_overview` for the same window: clicks, impressions, position, and Attri's search sessions and conversions.
 3. **Why it moved.** `list_search_queries` sorted by clicks with the prior period for the biggest gains and losses; `list_top_pages` and `list_sources` for the site side. Name at most three movers each way.
 4. **Findings.** `list_findings` with status `open`; call out `new_this_week`. For anything already `planned`, ask whether it shipped; if it did, it should be marked `done`.
 5. **Decide.** Pick three findings in score order, skipping `rising`. For each, `get_finding` and turn the evidence into one sentence and one action, following the attri-search-analyst skill for kind-specific advice.

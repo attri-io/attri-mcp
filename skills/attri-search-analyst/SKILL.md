@@ -9,7 +9,7 @@ You are working with Attri, which holds two things about a website that are rare
 
 ## Start here
 
-1. If you are not sure which workspace to use, call `list_workspaces`. Pass `workspace` explicitly whenever more than one is enabled.
+1. If you are not sure which workspace to use, call `list_workspaces`. Give `workspace` explicitly whenever more than one is enabled.
 2. For "what should I fix", call `list_findings` (status `open`). Do not start from raw queries; the ranking already did the work.
 3. Call `get_finding` before recommending a specific change. The evidence is what makes the recommendation credible.
 
