@@ -1,0 +1,88 @@
+{
+  "name": "attri",
+  "version": "1.0.0",
+  "description": "Attri for AI assistants: link attribution, site analytics, Search Console data joined to on-site behaviour, and the posture review (ranked findings on what to fix first). Connects to Attri's MCP server with OAuth; you choose the workspaces and permissions.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Attri",
+    "shortDescription": "Site analytics and SEO fixes",
+    "longDescription": "Attri joins your Google Search Console data to what visitors do on your site, then ranks what to fix first by the visits each change could move: pages with a click-through gap, pages close to page one, pages competing for the same query, and sudden drops.\n\nAsk what to fix this week, why a page lost traffic, or which campaigns and short links drive signups and bookings. Attri answers from your own workspace data and can plan findings or create tracked short links when you allow it.\n\nConnect with your Attri account and choose which workspaces and permissions to share.",
+    "developerName": "Attri",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://attri.io",
+    "supportURL": "https://attri.io/support",
+    "privacyPolicyURL": "https://attri.io/privacy",
+    "termsOfServiceURL": "https://attri.io/terms",
+    "defaultPrompt": [
+      "What should I fix on my site first?",
+      "Why did search traffic to my top page drop?",
+      "Which of my short links drove the most conversions this month?"
+    ],
+    "brandColor": "#E08A3C",
+    "logo": "./assets/icon-512.png",
+    "composerIcon": "./assets/icon-512.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Headline use case: ranked site fixes. Attri's findings are ordered by the visits a change could move; the assistant should lead with the top finding and respect each finding's status.",
+              "prompt": "What should I fix on the site first?",
+              "tools_triggered": "list_workspaces, list_findings, get_finding",
+              "expected_behavior": "Leads with the CTR gap on /tours/kyoto-walking-tour (position ~6-7, CTR well under the ~4% expected, an estimated ~1,000+ extra visits/month) and notes that this finding is already marked planned. Then covers the drop on 'cherry blossom tour 2026' and the striking-distance queries for /guides/best-time-to-visit-japan. Treats rising queries (autumn foliage, momiji) as ones to watch, not fix."
+            },
+            {
+              "description": "Keyword cannibalization: two pages splitting the same queries.",
+              "prompt": "Are any of my pages competing with each other in Google?",
+              "tools_triggered": "list_workspaces, list_findings, get_search_query_pages",
+              "expected_behavior": "Identifies /guides/japan-rail-pass and /blog/is-the-jr-pass-worth-it splitting impressions for 'japan rail pass guide' (average positions around 12 and 15), and recommends choosing one page to own the query and consolidating or redirecting the other."
+            },
+            {
+              "description": "Diagnosing a traffic drop from Search Console data rather than guessing.",
+              "prompt": "Why did search traffic to the cherry blossom post drop?",
+              "tools_triggered": "list_workspaces, list_findings, get_search_query_pages",
+              "expected_behavior": "Reports that clicks and impressions for 'cherry blossom tour 2026' on /blog/cherry-blossom-forecast-2026 fell sharply over recent weeks while average position stayed around 4.8, and concludes the cause is lower search demand or a SERP change, not lost rankings."
+            },
+            {
+              "description": "Link attribution: which campaigns and short links drive bookings.",
+              "prompt": "Which of my short links drove the most bookings in the last 28 days?",
+              "tools_triggered": "list_workspaces, list_conversions",
+              "expected_behavior": "Returns attri.link short links (slugs starting with bp-) ranked by booking conversions attributed to them in the last 28 days, with clicks and conversion rate for each, and names the top performer or states a tie."
+            },
+            {
+              "description": "Write action: creating a tracked short link with UTM parameters. Requires the write permission to be granted on the Attri consent screen.",
+              "prompt": "Create a short link to the autumn foliage tour page for our October newsletter.",
+              "tools_triggered": "create_link",
+              "expected_behavior": "Creates an attri.link short link whose destination is https://brightpath-tours.example/tours/autumn-foliage-week with utm_source=newsletter and utm_medium=email (and a campaign such as october-newsletter), then returns the new short URL."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Destructive request the app does not support. Attri exposes no delete tools; the assistant should say links can't be deleted from here, point to app.attri.io, and must not call create_link or set_finding_status.",
+              "prompt": "Delete all of my short links."
+            },
+            {
+              "description": "Data Attri does not hold. Attri has no ad spend data; the assistant should say so rather than estimate or invent figures, and may offer related Attri data (paid-channel sessions or conversions).",
+              "prompt": "How much did we spend on Google Ads last month?"
+            },
+            {
+              "description": "A site outside the connected workspace. The connection only grants the workspaces the user chose at consent (Brightpath Tours); the assistant should say it can only see those and not attempt to report on another domain.",
+              "prompt": "Show me the traffic for competitor-tours.example over the last month."
+            }
+          ]
+        },
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "First release: Attri's MCP server (site analytics, Search Console, ranked findings, short links, conversions, goals) and two skills, attri-search-analyst and attri-weekly-review."
+      }
+    }
+  }
+}
