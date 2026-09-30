@@ -27,7 +27,7 @@
     "shortDescription": "Site analytics and SEO fixes",
     "longDescription": "Attri joins your Google Search Console data to what visitors do on your site, then ranks what to fix first by the visits each change could move: pages with a click-through gap, pages close to page one, pages competing for the same query, and sudden drops.\n\nAsk what to fix this week, why a page lost traffic, or which campaigns and short links drive signups and bookings. Attri answers from your own workspace data and can plan findings or create tracked short links when you allow it.\n\nConnect with your Attri account and choose which workspaces and permissions to share.",
     "developerName": "Attri",
-    "category": "Productivity",
+    "category": "Data & Analytics",
     "capabilities": [
       "Read",
       "Write"
