@@ -96,7 +96,8 @@
             }
           ]
         },
-        "commerce": false
+        "commerce": false,
+        "demo_recording_url": "https://drive.google.com/file/d/1vD_S3mwZo6PUJ9PY8se9FLs89fCqULlO/view?usp=sharing"
       },
       "publication": {
         "release_notes": "First release: Attri's MCP server (site analytics, Search Console, ranked findings, short links, conversions, goals) and two skills, attri-search-analyst and attri-weekly-review."
