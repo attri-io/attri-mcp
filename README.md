@@ -31,6 +31,7 @@ Each client opens Attri in your browser the first time; you pick the workspaces 
 |---|---|
 | `skills/attri-search-analyst/SKILL.md` | How to read Attri's findings and search data, what "could move" means, and the order to work in |
 | `skills/attri-weekly-review/SKILL.md` | A weekly routine: what moved, what to do next, plan it |
+| `skills/attri-content-writer/SKILL.md` | Turn an open finding into the content it calls for, in the site's voice, and plan it so Attri measures the result |
 
 Plugin manifests for Grok Build / Grok Bot and Cursor, and the Claude Code plugin, live alongside these skills (see `specs/assistant-integrations.md` in the product repo for the plan).
 
