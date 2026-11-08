@@ -21,11 +21,12 @@ Every finding has a `kind`, a `potential` (monthly visits the change could move)
 |---|---|---|
 | `ctr_gap` | The page gets real impressions but far fewer clicks than its position normally earns | Rewrite the title and meta description: lead with the query people use, make the description a reason to click. Measured by CTR for the page. |
 | `update_page` | One page ranks on page 2 or 3 (position 8–25) for queries with real impressions | Strengthen that page rather than writing a new one: answer the top query near the top, tighten the title, link to it from a page that already ranks. Measured by position for the top query. |
+| `question` | A page shows at a good position (15 or better) for long, specific questions (8+ words) but earns almost no clicks. One question usually arrives in many phrasings, so they are grouped per page | Answer the top question in the first two sentences of the page, under an H2 worded the way people ask it. Many of these read like assistant prompts, so clicks can stay low even once answered; say so. Measured by CTR for the top query. |
 | `cannibalization` | Two or more of the site's pages split one query | Pick the page that should own it, fold the other's content in or redirect it, make internal links agree. Measured by position for the query. |
 | `drop` | A query lost impressions or clicks sharply this week against last week | Investigate before changing anything: did the page change, did the search results change, did a competitor take the spot? Measured by clicks for the query. |
 | `rising` | A query is climbing fast | No action. Say what is working and leave it alone. |
 
-Work order when several are open: CTR gaps first (cheapest, fastest to show), then update-page findings, then cannibalization. Drops need a diagnosis, not a fix. Rising is for watching.
+Work order when several are open: CTR gaps first (cheapest, fastest to show), then question findings (one answer block on one page), then update-page findings, then cannibalization. Drops need a diagnosis, not a fix. Rising is for watching.
 
 ## Rules
 

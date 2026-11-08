@@ -24,6 +24,7 @@ Attri finds the gap and measures the outcome. You write what fills the gap, noth
 |---|---|
 | `ctr_gap` | Three title options (50–60 characters) and three meta descriptions (140–155 characters). Lead with the query in natural words; the description gives a reason to click that matches the query's intent. Recommend one pair and say why. |
 | `update_page` | The section the page is missing: an H2 phrased as the top query, a direct answer in the first two sentences, then the supporting detail. Add a revised title if the current one does not mention the query. List one or two pages that already rank which should link here, with the anchor text. |
+| `question` | An answer block for the top of the page: an H2 worded as the top question, then a direct answer in two or three sentences that also covers the other phrasings in the evidence. If the phrasings ask about different things (price, guarantees, flexibility), add one FAQ entry per distinct question, each answered in one or two sentences. Do not rewrite the rest of the page. |
 | `cannibalization` | A plan, not prose: which page should own the query (higher conversions first, then position), what to move from the other page into it, whether to redirect or retarget the other page, and which internal links to change. Draft the moved section only if the person asks. |
 | `drop` | No draft. Diagnose first, following the attri-search-analyst skill. |
 | `rising` | No draft. It is working; leave it alone. |
