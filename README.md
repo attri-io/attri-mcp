@@ -12,8 +12,11 @@ The assistant talks to Attri through the MCP server at `https://app.attri.io/mcp
 | Grok Build / Grok Bot | Search "Attri" in the plugin marketplace, or point at this repo |
 | Cursor | Search "Attri" in the plugin marketplace |
 | Claude.ai, ChatGPT, anything with a custom-connector field | Add `https://app.attri.io/mcp` directly; no plugin needed |
+| Any other agent (Codex, Gemini CLI, OpenCode, …) | `npx skills add attri-io/attri-mcp` for the skills, then add `https://app.attri.io/mcp` as an MCP server |
 
 Each client opens Attri in your browser the first time; you pick the workspaces and permissions there.
+
+`npx skills add` installs the skills only. They call Attri's tools, so the MCP server must be connected too.
 
 ## Layout
 
