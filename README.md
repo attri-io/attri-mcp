@@ -41,7 +41,7 @@ Plugin manifests for Grok Build / Grok Bot and Cursor, and the Claude Code plugi
 ## Tools the skills rely on
 
 Read: `list_workspaces`, `get_workspace`, `get_site_overview`, `list_top_pages`, `list_sources`, `list_outbound_clicks`, `get_search_overview`, `list_search_queries`, `list_search_pages`, `get_search_query_pages`, `list_findings`, `get_finding`, `list_links`, `list_top_links`, `list_conversions`, `list_goals`; `list_form_submissions` (needs the forms:read scope).
-Write (need the matching scope): `create_link`, `set_finding_status`.
+Write (need the matching scope): `create_link`, `update_link`, `set_finding_status`.
 
 ## Privacy
 
